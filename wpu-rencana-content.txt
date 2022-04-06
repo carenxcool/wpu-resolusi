@@ -4,4 +4,5 @@ JAVASCRIPT
 PHP
 HTML
 CSS
-STREAMER GAME
+STREAMER GAME : 1. Mobile Legends Bang-Bang
+                2. PUBGM New State
