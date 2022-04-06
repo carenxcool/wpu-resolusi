@@ -4,5 +4,8 @@ JAVASCRIPT
 PHP
 HTML
 CSS
-STREAMER GAME : 1. Mobile Legends Bang-Bang
-                2. PUBGM New State
+STREAMER GAME MOBILE : 1. Resident Evil Series
+                       2. Metal Gear Solid 4
+
+
+
