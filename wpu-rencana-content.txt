@@ -4,4 +4,5 @@ JAVASCRIPT
 PHP
 HTML
 CSS
-STREAMER GAME
+STREAMER GAME : 1. Resident Evil Series
+                2. Metal Gear Solid 4
