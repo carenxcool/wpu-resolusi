@@ -1,0 +1,211 @@
+/*FONT*/
+@font-face {
+	font-family: 'BebasNeue';
+	src: url(../fonts/BebasNeue-Regular.woff);
+}
+
+/*STYLE UTAMA*/
+body {
+	/*SHORTHAND FONT*/
+	font: 18px/36px 'BebasNeue', 'Arial Narrow' , arial, sans-serif;
+	background-image: url(../img/full/wallpaper.jpg);
+	background-size: cover;
+	}
+
+h1	{
+	font-size: 80px;
+	margin: 50px 0px;
+	text-align: center;
+	text-shadow: 1px 1px 2px white;
+}
+
+.container1 {
+	width: 840px;
+	background-color: lightgrey;
+	margin: auto;
+	padding: 30px;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0,.3);
+	border-radius: 20px;
+}
+
+.container2 {
+	width: 840px;
+	background-color: red;
+	margin: auto;
+	padding: 30px;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0,.3);
+	border-radius: 20px;
+}
+
+
+#ket1 {
+	text-align: center;
+	font-size: 40px;
+	/* font-weight: bold; */
+	font-family: verdana;
+	margin-bottom: 20px;
+}
+
+#ket2 {
+	text-align: center;
+	font-size: 40px;
+	font-family: verdana;
+	margin-bottom: 20px;
+}
+
+.gallery li {
+	width: 120px;
+	height: 120px;
+	/*overflow: hidden;*/
+	border: 5px solid black;
+	float: left;
+	margin-right: 10px;
+	position: relative;
+
+}
+
+.gallery li,
+.gallery li img,
+.gallery li span {
+	border-radius: 50%;
+}
+
+
+.gallery li span {
+	display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200, 200, 200,.7);
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 120px;
+	color: #333;
+	text-shadow: 1px 1px 1px #ddd;
+	opacity: 0;
+	transform: scale(0) rotate(0);
+	transition: .3s;
+	
+}
+
+
+.gallery li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+
+
+/*COUNTER LI JIKA RUNTUH*/
+.clear {
+	clear: both;
+}
+
+/*OVERLAY*/
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0);
+	z-index: 9999;
+	transition: 4s;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0,.7);
+}
+
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 7px rgba(0, 0, 0,.6);
+}
+
+
+.overlay:target img {
+	animation: fadeAja 1s;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -20px;
+	color: whitesmoke;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	line-height: 14px;
+	padding: 5px;
+	opacity: 0;
+}
+
+.overlay:target .close {
+	animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target .next {
+	animation : fadeAja .5s .5s forwards;
+}
+
+.overlay:target .prev {
+	animation : fadeAja .5s .5s forwards;
+}
+
+/*NAVIGASI*/
+.next, .prev {
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/next.png);
+	position: absolute;
+	text-indent: -9999px;
+	top: 50%;
+	/* margin-left: 50px; */
+	/* margin-right: 50px; */
+}
+
+.prev {
+	background-image: url(../img/prev.png);
+	margin-left: -100px;
+}
+
+/*ANIMASI*/
+@keyframes fadeAja {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes zoomDanFade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+@keyframes slideDownFade {
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
